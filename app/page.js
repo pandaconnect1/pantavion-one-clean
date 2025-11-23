@@ -1,10 +1,20 @@
+import MainNav from "../components/MainNav";
+import Hero from "../components/Hero";
+import SectionOverview from "../components/SectionOverview";
+
 export default function HomePage() {
   return (
     <main className="pv-container py-10">
-      <h1 className="text-3xl font-bold mb-4">Pantavion One</h1>
-      <p className="text-white/70">
-        Welcome to the unified platform for all humanity.
-      </p>
+      
+      {/* Main Navigation */}
+      <MainNav />
+
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Section Overview (Pulse – People – Chat – Voice – Elite – Compass – Mind – Create) */}
+      <SectionOverview />
+
     </main>
   );
 }
