@@ -1,27 +1,30 @@
-// app/compass/page.js
-import Link from "next/link";
-
-export const metadata = {
-  title: "Pantavion One — Compass",
-};
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 export default function CompassPage() {
   return (
-    <main className="min-h-screen bg-black text-gray-100 p-10">
-      <Link
-        href="/"
-        className="text-sm text-emerald-400 hover:underline inline-block mb-8"
+    <div className="min-h-screen w-full p-6 flex flex-col items-center justify-start gap-6">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-3xl font-bold text-center"
       >
-        ← Back to Pantavion One
-      </Link>
+        Compass
+      </motion.h1>
 
-      <h1 className="text-4xl font-bold text-emerald-400 mb-4">Compass</h1>
-
-      <p className="text-lg text-gray-300 max-w-2xl">
-        Το Compass είναι η πυξίδα του Pantavion One: στόχοι, κατευθύνσεις,
-        διαδρομές, προτεραιότητες, alerts. Σε βοηθά να ξέρεις πάντα πού
-        βρίσκεσαι και προς τα πού πας.
-      </p>
-    </main>
+      <Card className="w-full max-w-2xl p-4 rounded-2xl shadow-lg">
+        <CardContent className="text-center">
+          <p className="text-lg font-medium">
+            Welcome to Pantavion Compass
+          </p>
+          <p className="text-sm mt-2 text-muted-foreground">
+            (Placeholder) — Add your global navigation, guides, world folders,
+            knowledge graph routes, and map links here.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
