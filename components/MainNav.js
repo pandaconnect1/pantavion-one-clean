@@ -1,34 +1,45 @@
+
+// components/MainNav.js
+import Link from "next/link";
+
 export default function MainNav() {
-  const sections = [
-    "Pulse",
-    "People",
-    "Chat",
-    "Voice",
-    "Elite",
-    "Compass",
-    "Mind",
-    "Create",
-  ];
-
   return (
-    <header className="border-b border-white/10 bg-black/40 backdrop-blur">
+    <header className="border-b border-slate-800/60">
       <div className="pv-container flex items-center justify-between py-4">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full bg-emerald-500/80" />
-          <span className="text-lg font-semibold tracking-tight">
-            Pantavion One
+        {/* Λογότυπο / brand */}
+        <Link href="/" className="flex items-center gap-2">
+          <span className="pv-logo-circle" />
+          <span className="text-sm font-semibold tracking-[0.2em] uppercase text-emerald-400">
+            Here We Are One
           </span>
-        </div>
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-4 text-sm text-white/70">
-          {sections.map((item) => (
-            <button
-              key={item}
-              className="hover:text-white transition-colors duration-150"
-            >
-              {item}
-            </button>
-          ))}
+        {/* Δεξιά – μενού κειμένου */}
+        <nav className="hidden md:flex items-center gap-5 text-xs font-medium text-slate-300">
+          <Link href="/pulse" className="hover:text-emerald-400 transition-colors">
+            Pulse
+          </Link>
+          <Link href="/people" className="hover:text-emerald-400 transition-colors">
+            People
+          </Link>
+          <Link href="/chat" className="hover:text-emerald-400 transition-colors">
+            Chat
+          </Link>
+          <Link href="/voice" className="hover:text-emerald-400 transition-colors">
+            Voice
+          </Link>
+          <Link href="/elite" className="hover:text-emerald-400 transition-colors">
+            Elite
+          </Link>
+          <Link href="/compass" className="hover:text-emerald-400 transition-colors">
+            Compass
+          </Link>
+          <Link href="/mind" className="hover:text-emerald-400 transition-colors">
+            Mind
+          </Link>
+          <Link href="/create" className="hover:text-emerald-400 transition-colors">
+            Create
+          </Link>
         </nav>
       </div>
     </header>
