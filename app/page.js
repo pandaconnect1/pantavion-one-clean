@@ -1,17 +1,18 @@
+// app/page.js
 import MainNav from "../components/MainNav";
 import Hero from "../components/Hero";
 import SectionOverview from "../components/SectionOverview";
 
 export default function HomePage() {
   return (
-    <main className="pv-container py-10">
-      {/* Main Navigation */}
+    <main className="min-h-screen flex flex-col">
+      {/* Global Navigation */}
       <MainNav />
 
-      {/* Hero Section */}
+      {/* Κεντρικό Hero */}
       <Hero />
 
-      {/* Section Overview */}
+      {/* Πλέγμα με τα sections */}
       <SectionOverview />
     </main>
   );
