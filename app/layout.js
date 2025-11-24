@@ -1,8 +1,10 @@
 
+import './globals.css';
+
 export const metadata = {
   title: "Pantavion One — Here We Are One",
   description:
-    "Global unified platform for all humanity — Pulse · People · Chat · Voice · Compass · Mind · Create · Elite."
+    "Global unified platform for all humanity — Pulse · People · Chat · Voice · Compass · Mind · Create · Elite.",
 };
 
 export default function RootLayout({ children }) {
