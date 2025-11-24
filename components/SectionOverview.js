@@ -11,14 +11,16 @@ export default function SectionOverview() {
   ];
 
   return (
-    <section className="py-10 px-6">
-      <h3 className="text-2xl font-semibold mb-6">Pantavion Sections</h3>
+    <section className="pv-container pb-16">
+      <h2 className="text-xl font-semibold mb-4">
+        Pantavion Sections
+      </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {sections.map((item, index) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {sections.map((item) => (
           <div
-            key={index}
-            className="p-4 bg-gray-900 rounded-xl text-center border border-gray-700"
+            key={item}
+            className="rounded-xl border border-white/10 bg-white/5 py-3 px-4 text-center text-sm font-medium tracking-wide hover:border-emerald-400 hover:bg-emerald-400/10 transition-all cursor-pointer"
           >
             {item}
           </div>
