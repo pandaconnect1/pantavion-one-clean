@@ -22,6 +22,7 @@ const sections = [
 export default function CompassPage() {
   return (
     <div className="min-h-screen w-full px-4 py-8 flex flex-col items-center bg-slate-950 text-slate-50">
+
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -59,6 +60,7 @@ export default function CompassPage() {
           </motion.div>
         ))}
       </div>
+
     </div>
   );
 }
