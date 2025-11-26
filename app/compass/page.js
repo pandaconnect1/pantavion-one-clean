@@ -1,9 +1,8 @@
-
 "use client";
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
 const sections = [
   "World Map & Regions",
@@ -17,72 +16,49 @@ const sections = [
   "Education & Universities",
   "Business & Jobs",
   "Sports & Stadiums",
-  "Embassies & Services"
+  "Embassies & Services",
 ];
 
 export default function CompassPage() {
   return (
-    <div className="min-h-screen w-full px-4 py-8 flex flex-col items-center gap-8">
-      {/* Τίτλος */}
+    <div className="min-h-screen w-full px-4 py-8 flex flex-col items-center bg-slate-950 text-slate-50">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-bold text-center"
+        transition={{ duration: 0.6 }}
+        className="text-3xl md:text-4xl font-bold tracking-wide mb-4 text-center"
       >
         Pantavion Compass
       </motion.h1>
 
-      {/* Υπότιτλος */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="text-sm md:text-base text-center max-w-2xl text-muted-foreground"
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="text-sm md:text-base text-slate-300 max-w-2xl text-center"
       >
-        Ο παγκόσμιος χάρτης του Pantavion. Εδώ θα οργανώσουμε ηπείρους, χώρες,
-        πόλεις, διαδρομές και θεματικούς φακέλους για όλον τον κόσμο.
+        Explore the world through Pantavion: continents, countries, cities,
+        ports, airports and key services — all in one global map.
       </motion.p>
 
-      {/* Κεντρική κάρτα */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className="w-full max-w-4xl"
-      >
-        <Card className="rounded-2xl shadow-lg">
-          <CardContent className="p-6 md:p-8 flex flex-col gap-6">
-            <div className="text-center">
-              <p className="text-lg md:text-xl font-semibold">
-                Global Navigation Hub
-              </p>
-              <p className="text-xs md:text-sm mt-2 text-muted-foreground">
-                (Placeholder) — Στο επόμενο στάδιο θα μπουν real χάρτες,
-                δέντρο ηπείρων / χωρών / πόλεων και links προς όλες τις
-                ενότητες του Pantavion.
-              </p>
-            </div>
-
-            {/* Grid με ενότητες */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              {sections.map((item) => (
-                <div
-                  key={item}
-                  className="text-xs md:text-sm border rounded-2xl px-3 py-2 md:px-4 md:py-3 text-center cursor-default hover:shadow-sm transition"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <p className="text-[11px] md:text-xs text-center text-muted-foreground">
-              * Αργότερα θα συνδέσουμε το Compass με Neo4j και χάρτες
-              (continents → countries → cities → places).
-            </p>
-          </CardContent>
-        </Card>
-      </motion.div>
+      <div className="mt-8 grid gap-4 w-full max-w-5xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {sections.map((label, index) => (
+          <motion.div
+            key={label}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 * index, duration: 0.4 }}
+          >
+            <Card className="h-full bg-slate-900/60 border-slate-700 hover:border-sky-400 transition-colors cursor-pointer">
+              <CardContent className="p-4 flex items-center justify-center text-center">
+                <span className="text-sm md:text-base font-medium">
+                  {label}
+                </span>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }
