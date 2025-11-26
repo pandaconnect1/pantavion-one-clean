@@ -47,7 +47,7 @@ export default function CompassPage() {
             key={label}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 * index, duration: 0.3 }}
+            transition={{ delay: 0.1 * index, duration: 0.4 }}
           >
             <Card className="h-full bg-slate-900/60 border-slate-700 hover:border-sky-400 transition-colors cursor-pointer">
               <CardContent className="p-4 flex items-center justify-center text-center">
